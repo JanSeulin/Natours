@@ -2,4 +2,11 @@ node_modules/
 config.env
 *.env
 .parcel-cache/
-.vscode/
+
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
