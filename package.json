@@ -10,6 +10,7 @@
     "main": false
   },
   "scripts": {
+    "start": "node server.js",
     "start:dev": "NODE_ENV=development nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
