@@ -42,9 +42,7 @@ const sendErrorDev = (err, req, res) => {
 };
 
 const sendErrorProd = (err, req, res) => {
-  // console.log(err);
   const msg = err.isOperational ? err.message : 'Something went wrong.';
-  // console.log(msg);
 
   if (!err.isOperational) {
     console.error('error, err');

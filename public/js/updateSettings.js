@@ -15,7 +15,6 @@ export const updateSettings = async (data, type) => {
       data,
     });
 
-    // console.log(res.data);
     if (res.data.status === 'success') {
       showAlert('success', `${type.toUpperCase()} updated successfully!`);
       // window.setTimeout(() => {
@@ -23,7 +22,6 @@ export const updateSettings = async (data, type) => {
       // }, 1500);
     }
   } catch (err) {
-    // console.log(err.response);
     showAlert('error', err.response.data.message);
   }
 };

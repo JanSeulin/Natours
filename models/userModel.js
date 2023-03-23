@@ -84,7 +84,6 @@ userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
       10
     );
 
-    // console.log(changedTimestamp, JWTTimestamp);
     return JWTTimestamp < changedTimestamp; // changed password AFTER issuging JWT = true, else = false
   }
 
@@ -113,10 +112,10 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
-userSchema.post(/^find/, function (docs, next) {
-  console.log(`Query took ${Date.now() - this.start} milliseconds`);
-  next();
-});
+// userSchema.post(/^find/, function (docs, next) {
+//   console.log(`Query took ${Date.now() - this.start} milliseconds`);
+//   next();
+// });
 
 const User = mongoose.model('User', userSchema);
 
